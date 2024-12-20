@@ -337,3 +337,299 @@ print_r ($a);
 $a=array("red","green","blue","yellow","brown");
 print_r(array_slice($a,3,4));
 ?>
+<br>
+<!-- Remove elements from an array and replace it with new elements: -->
+
+
+<?php
+$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$a2=array("a"=>"black","b"=>"purple");
+array_splice($a1,0,2,$a2);
+print_r($a1);
+?>
+<br>
+
+<!-- Return the sum of all the values in the array -->
+
+<?php
+$a=array(10,45,15,35);
+echo array_sum($a);
+?>
+
+<br>
+<!-- Return all the values of an array (not the keys): -->
+
+<?php
+$a=array("Name"=>"Peter","Age"=>"41","Country"=>"USA");
+print_r(array_values($a));
+?>
+
+<br>
+<!-- Remove duplicate values from an array: -->
+
+<?php
+$a=array("a"=>"red","b"=>"green","c"=>"red","d"=>"black","e"=>"white","f"=>"black");
+print_r(array_unique($a));
+?>
+<br>
+
+<!-- Insert the element "blue" "white" to an array: -->
+<?php
+$a=array("a"=>"red","b"=>"green");
+array_unshift($a,"blue","white");
+print_r($a);
+?>
+<br>
+<!-- Sort an associative array in descending order, according to the value: -->
+
+<?php
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+arsort($age);
+?>
+
+<br>
+<!-- Run each array element in a user-defined function: -->
+
+<?php
+function walk($value,$key)
+{
+echo "The key $key has the value $value<br>";
+}
+$a=array("a"=>"red","b"=>"green","c"=>"blue");
+array_walk($a,"walk");
+?>
+<br>
+<!-- Run each array element in a user-defined function: -->
+ 
+<?php
+function walkrecursive($value,$key)
+{
+echo "The key $key has the value $value<br>";
+}
+$a1=array("a"=>"red","b"=>"green");
+$a2=array($a1,"1"=>"blue","2"=>"yellow");
+array_walk_recursive($a2,"walkrecursive");
+?>
+<br>
+<!-- Sort an associative array in descending order, according to the value: -->
+
+<?php
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+arsort($age);
+
+foreach($age as $x=>$x_value)
+   {
+   echo "Key=" . $x . ", Value=" . $x_value;
+   echo "<br>";
+   }
+?>
+
+<br>
+
+<!-- Sort an associative array in ascending order, according to the value: -->
+
+<?php
+$age=array("Ezra"=>"10","Reggie"=>"20","Basil"=>"225");
+arsort($age);
+
+foreach($age as $x=>$y)
+   {
+   echo "Key=" . $x . ", Value=" . $y;
+   echo "<br>";
+   }
+?>
+<br>
+<!-- Create an array from variables and their values: -->
+
+<?php
+$firstname = "Rowan";
+$lastname = "Arlo";
+$age = "50";
+
+$result = compact("firstname", "lastname", "age");
+
+print_r($result);
+?>
+<br>
+<!-- Return the number of elements in an array: -->
+<?php
+$cars=array("kia","tata","toyota","skoda","mahindra");
+echo count($cars);
+?>
+<br>
+<!-- Output the value of the current element in an array: -->
+<?php
+$people = array("Henry", "Noah", "Oliver", "William");
+echo current($people) . "<br>";
+?>
+<br>
+<!-- Output the value of the current and the last element in an array: -->
+<?php
+$people = array("Elijah", "Theodore", "James", "Liam");
+echo current($people) . "<br>";
+echo end($people);
+?>
+
+<br>
+<!-- Assign the values "Cat", "Dog" and "Horse" to the variables $a, $b and $c: -->
+<?php
+$a = "Original";
+$my_array = array("a" => "Cat","b" => "Dog", "c" => "Horse","d"=>"buffalo");
+extract($my_array);
+echo "\$a = $a; \$b = $b; \$c = $c; \$d = $d"; 
+?>
+
+<br>
+<!-- Search for the value "Thomas" in an array and output some text: -->
+
+  <?php
+$people = array("Samuel", "Owen", "Jack", "Levi","Thomas","Santiago","Christopher");
+
+if (in_array("Thomas", $people))
+  {
+  echo "Match found";
+  }
+else
+  {
+  echo "Match not found";
+  }
+?>
+<br>
+<!-- Return the element key from the current internal pointer position: -->
+
+<?php
+$people=array("Nolan","Adrian","Ian","Ryan","Easton","Jose");
+echo "The key from the current position is: " . key($people);
+?>
+
+<br>
+<!-- Assign variables as if they were an array: -->
+  <?php
+$my_array = array("Dog","Cat","Horse");
+
+list($a, $b, $c) = $my_array;
+echo "I have several animals,  $a, $b and  $c.";
+?>
+<br>
+<!-- Output the value of the current element in an array: -->
+
+<?php
+$people = array("Colt", " Karter", "Grant", "Avery");
+
+echo pos($people) . "<br>";
+?>
+<br>
+<!-- Output the value of the current, next and previous element in the array: -->
+
+<?php
+$people = array("Jorge", "Brady", "Kayson", "Aziel","Cohen","Atticus","Hendrix");
+echo current($people) . "<br>";
+echo next($people) . "<br>";
+echo prev($people);
+?>
+<br>
+
+<!-- Create an array containing a range of elements from "1" to "9": -->
+
+<?php
+$number = range(1,9);
+print_r ($number);
+?>
+<br>
+<!-- Output the value of the current and next element in an array, then reset the array's internal pointer to the first element in the array: -->
+
+
+<?php
+$people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+echo current($people) . "<br>";
+
+echo next($people) . "<br>";
+
+echo reset($people);
+?>
+<br>
+<!-- Sort the elements of the $animal array in descending alphabetical order: -->
+
+<?php
+$animal=array("Lion","Panther","Crow","Hen","Elephant","Bear","Duck","Swan","Snake");
+rsort($animal);
+$clength=count($animal);
+for($x=0;$x<$clength;$x++)
+  {
+  echo $animal[$x];
+  echo "<br>";
+  }
+?>
+<br>
+<!-- Return the number of elements in an array: -->
+
+<?php
+$cars=array("Volvo","BMW","Toyota","Kia","Skoda","Tata","Mahindra");
+echo sizeof($cars);
+?>
+<br>
+
+<!-- Sort the elements of the $cars array in ascending alphabetical order: -->
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+sort($cars);
+
+foreach ($cars as $key => $val) {
+    echo "cars[" . $key . "] = " . $val . "<br>";
+}
+?>
+
+
+<!-- Sort the elements of an array by values using a user-defined comparison function (and maintains the index association): -->
+
+
+<?php
+function my_sort($a, $b) {
+  if ($a == $b) return 0;
+  return ($a < $b) ? -1 : 1;
+}
+
+$arr = array("a"=>4, "b"=>2, "c"=>8, "d"=>6);
+uasort($arr, "my_sort");
+
+foreach($arr as $key => $value) {
+  echo "[" . $key . "] => " . $value;
+  echo "<br>";
+}
+?>
+
+
+<!-- Sort the elements of an array by keys using a user-defined comparison function: -->
+
+<?php
+function sort_($a, $b) {
+  if ($a == $b) return 0;
+  return ($a < $b) ? -1 : 1;
+}
+
+$arr = array("a"=>4, "b"=>2, "c"=>8, "d"=>6);
+uksort($arr, "sort_");
+
+foreach($arr as $key => $value) {
+  echo "[" . $key . "] => " . $value;
+  echo "<br>";
+}
+?>
+
+<!-- Sort the elements of an array by values using a user-defined comparison function: -->
+
+<?php
+function mysort($a, $b) {
+  if ($a == $b) return 0;
+  return ($a < $b) ? -1 : 1;
+}
+
+$a = array(4, 2, 8, 6);
+usort($a, "my sort");
+
+foreach($a as $key => $value) {
+  echo "[" . $key . "] => " . $value;
+  echo "<br>";
+}
+?>
