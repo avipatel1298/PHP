@@ -8,7 +8,6 @@ echo "hello";
 <br>
 <!-- if else condition  -->
 
-
 <?php
 $x=20;
 
@@ -22,7 +21,6 @@ if($x>=30){
 
 <br>
 <!-- elseif condition -->
-
 
 <?php
 $x=100;
@@ -43,15 +41,14 @@ echo "have a nice day";
 <?php
 $a = 13;
 
-if ($a > 10) {
-  echo "Above 10";
-  if ($a > 20) {
-    echo " and also above 20";
-  } else {
-    echo " but not above 20";
+  if ($a > 10) {
+    echo "Above 10";
+    if ($a > 20) {
+      echo " and also above 20";
+    } else {
+      echo " but not above 20";
+    }
   }
-}
-
 ?> 
 
 <br>
@@ -59,11 +56,10 @@ if ($a > 10) {
 <!-- while loop  -->
 <?php
 $a=10;
-while($a<=20){
-echo $a;
-$a++;
-
-}
+  while($a<=20){
+    echo $a;
+    $a++;
+  }
 ?>
 <br>    
 
@@ -95,7 +91,7 @@ echo $i;
  <!-- Indexed Arrays  -->
 <?php
 
-$a =array("volvo","bmw","kia","toyota","kia");
+$a = array("volvo","bmw","kia","toyota","kia");
 
 foreach($a as $b){
     echo $b."<br>";
@@ -106,7 +102,7 @@ foreach($a as $b){
 
 
 
-$result=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"black");
+$result = array("a"=>"red","b"=>"green","c"=>"blue","d"=>"black");
 
 foreach($result as $c=>$d){
 echo "$c : $d. <br>";
@@ -125,9 +121,9 @@ foreach($a as $b){
 
 //continue foreach loop
 
-$cars =array("volvo","bmw","kia","toyota","kia","ford","ferrari");
+$cars = array("volvo","bmw","kia","toyota","kia","ford","ferrari");
 foreach($cars as $model){
-    if($model=="bmw"){
+    if($model == "bmw"){
         continue;
     }
     echo $model."<br>";

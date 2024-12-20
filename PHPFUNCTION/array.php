@@ -633,3 +633,8 @@ foreach($a as $key => $value) {
   echo "<br>";
 }
 ?>
+
+<?php
+$x = "Hello World!";
+echo strtoupper($x);
+?> 

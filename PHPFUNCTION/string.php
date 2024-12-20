@@ -132,6 +132,6 @@ echo strchr("Hello good ","good");
 <!-- Remove characters from both sides of a string -->
 
 
-<?php
+<?php 
 $str="hello how day go";
 echo trim($str,"he go");
