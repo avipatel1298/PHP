@@ -1,6 +1,4 @@
-<?php
-echo "hello";
-?>
+
 <!-- if condition  -->
 <?php
 $x=10;
