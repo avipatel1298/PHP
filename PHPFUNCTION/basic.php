@@ -1,5 +1,5 @@
 <?php
-echo "hello";
+echo "hello from test";
 ?>
 <!-- if condition  -->
 <?php
