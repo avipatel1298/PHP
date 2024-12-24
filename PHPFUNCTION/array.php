@@ -1,3 +1,4 @@
+
 <!-- Change all keys in an array to uppercase: -->
 <?php
 $age=array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
@@ -638,3 +639,5 @@ foreach($a as $key => $value) {
 $x = "Hello World!";
 echo strtoupper($x);
 ?> 
+
+
