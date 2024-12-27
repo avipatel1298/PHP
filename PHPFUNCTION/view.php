@@ -47,7 +47,7 @@
       <td><img src="./image/<?php echo $row['image'];?> " style="width: 50px; height: 50px;"> </td>
       <td><?php echo $row["message"]; ?></td>
       <td><?php echo $row["number"]; ?></td>
-      <td><?php echo $row["gender"]; ?></td>
+      <td><?php echo $row["gender"]; ?></td>?>
       <td><?php echo $row["hobby"]; ?></td>
       <td><?php echo $row["country"]; ?></td>
      <td><a class="btn btn-danger" href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>

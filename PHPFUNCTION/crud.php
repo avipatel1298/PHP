@@ -18,6 +18,8 @@ if(isset($_POST['submit'])){
 $result=mysqli_query($conn,"INSERT INTO `task`(`firstname`,`lastname`,`email`,`password`,`cpassword`,`image`,`message`,`number`,`gender`,`hobby`,`country`)
 VALUES('$firstname','$lastname','$email','$password','$cpassword','$img','$message','$number','$gender','$hobby','$country')");
 
+
+
 if($result){
     header("location:view.php"); 
     echo "data insert suceessfully";
