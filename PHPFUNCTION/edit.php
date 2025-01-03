@@ -5,8 +5,6 @@ $user_id = $_GET['id'];
 $sql =mysqli_query($conn,"SELECT * FROM `task` WHERE `id`='$user_id'");
 $result =mysqli_fetch_array($sql);  
 
-?>
-<?php
 if(isset($_POST['update'])){
     
     $firstname=$_POST['firstname'];
@@ -99,7 +97,7 @@ if(isset($_POST['update'])){
              <label for="Reading">Reading</label><br>
             <input type="checkbox" id="hobby" name="hobby[]" value="Singing" <?php if (in_array("Singing",$chk)) echo "checked='checked'"; ?>>
             <label for="Singing">Singing</label><br>
-            <input type="checkbox" id="hobby" name="hobby[]" value="Cricket"> <?php if (in_array("Cricket",$chk)) echo "checked='checked'"; ?>
+            <input type="checkbox" id="hobby" name="hobby[]" value="Cricket"  <?php if (in_array("Cricket", $chk)) echo "checked='checked'"; ?>>
            <label for="cricket">cricket</label><br></br>
 
            <label for="country">Choose a country:</label>

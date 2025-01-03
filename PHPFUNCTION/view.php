@@ -26,6 +26,7 @@
       <th scope="col">Address</th>
       <th scope="col">Phone Number</th>
       <th scope="col">Gender</th>
+      <th scope="col">Hobby</th>
       <th scope="col">country</th>
       <th scope="col">Action</th>
     </tr>
@@ -50,8 +51,8 @@
       <td><?php echo $row["gender"]; ?></td>?>
       <td><?php echo $row["hobby"]; ?></td>
       <td><?php echo $row["country"]; ?></td>
-     <td><a class="btn btn-danger" href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-     <a class="btn btn-primary" href="delete.php?id=<?php echo $row['id']; ?>">delete</a>
+     <td><a class="btn btn-primary" href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
+     <a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">delete</a>
  </td>
     </tr>
   </tbody>
